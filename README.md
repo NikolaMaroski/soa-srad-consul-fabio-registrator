@@ -16,7 +16,7 @@
 To run:
   - docker-compose up
   
-## Service Registry & Discovery using Consul (Detailed)
+## Service Registry & Discovery using Consul
 
 ## Registry
 
