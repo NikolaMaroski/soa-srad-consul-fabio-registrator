@@ -24,6 +24,21 @@ services:
     depends_on:
       - consul
 
+  fabio:
+    container_name: fabio
+    image: fabiolb/fabio:latest
+    networks:
+      - internal
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - ./volumes/fabio:/etc/fabio
+    depends_on:
+      - consul
+    restart: always
+
+
   service1:
     build:
       context: ./service1
